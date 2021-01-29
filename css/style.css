@@ -26,16 +26,10 @@
 
 /* contenuti */
 
-.container > [class^="col-"],
-.container > [class^="col-"] > [class^="col-"] {
-  position: relative;
-}
 [class^="col-"]:empty {
-  height: 200px; /* questo mi dà l'altezza e tutto poi si adatta coi clearfix */
-}
-[class^="col-"]:empty {
-  text-align: center;
+  height: 200px;
   line-height: 200px;
+  text-align: center;
   overflow: hidden; /* per non far rompere il layout se si stringe la finestra */
 }
 .col-1:empty::after {
