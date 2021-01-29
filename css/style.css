@@ -36,6 +36,7 @@
 [class^="col-"]:empty {
   text-align: center;
   line-height: 200px;
+  overflow: hidden; /* per non far rompere il layout se si stringe la finestra */
 }
 .col-1:empty::after {
   content: '1 col';
