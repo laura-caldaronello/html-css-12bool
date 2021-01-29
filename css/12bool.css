@@ -1,11 +1,23 @@
-.debug .container {
-  width: 100%;
+/* nb: ho supposto che l'utente finale debba vedere solo il testo, non i bordi neri, per esercizio, altrimenti non sfrutto la classe debug (eliminandola non mi cmbia nulla)*/
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* inizio di ciò che l'utente non deve vedere */
+
+.debug [class^="col-"] {
   border: 1px solid black;
 }
+.debug .container > [class^="col-"] > [class^="col-"] {
+  border-color: white;
+}
+
+/* fine di quello che l'utente non deve vedere */
 
 [class^="col-"] {
   float: left;
-  border: 1px solid black;
 }
 .col-1 {
   width: calc((100% / 12) * 1);

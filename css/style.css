@@ -11,10 +11,31 @@
   clear: both;
 }
 
-[class^="col-"] {
-  text-align: center;
-  line-height: 200px;   /* questo mi dà l'altezza e tutto poi si adatta coi clearfix */
+/* i background per generazione */
+
+.container > [class^="col-"] {
   background-color: rgb(255 192 203);
+}
+.container > [class^="col-"] > [class^="col-"] {
+  background-color: rgb(240 127 128);
+}
+
+[class^="col-"]:not(:empty) {
+  padding: 5px;
+}
+
+/* contenuti */
+
+.container > [class^="col-"],
+.container > [class^="col-"] > [class^="col-"] {
+  position: relative;
+}
+[class^="col-"]:empty {
+  height: 200px; /* questo mi dà l'altezza e tutto poi si adatta coi clearfix */
+}
+[class^="col-"]:empty {
+  text-align: center;
+  line-height: 200px;
 }
 .col-1:empty::after {
   content: '1 col';
@@ -51,15 +72,6 @@
 }
 .col-12:empty::after {
   content: '12 col';
-}
-
-[class^="col-"]:not(:empty) {
-  padding: 5px;
-}
-
-.container > [class^="col-"] > [class^="col-"] {
-  background-color: rgb(240 127 128);
-  border-color: white;
 }
 .container > [class^="col-"] > [class^="col-"]::before {
   content: 'Nested ';
