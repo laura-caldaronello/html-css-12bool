@@ -37,6 +37,9 @@
   transform: translate(-50%,-50%);
   text-align: center;
 }
+
+/* nb: scriverò anche cose che non verranno utilizzate per generalizzare il più possibile */
+
 .col-1:empty::after {
   content: '1 col';
 }
