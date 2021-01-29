@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-.container::after {
+.container::after,
+[class^="col-"]:not(:empty)::after {
   content: '';
   display: table;
   clear: both;
@@ -12,42 +13,54 @@
 
 [class^="col-"] {
   text-align: center;
-  line-height: 200px;
+  line-height: 200px;   /* questo mi dà l'altezza e tutto poi si adatta coi clearfix */
   background-color: rgb(255 192 203);
 }
-.col-1::after {
+.col-1:empty::after {
   content: '1 col';
 }
-.col-2::after {
+.col-2:empty::after {
   content: '2 col';
 }
-.col-3::after {
+.col-3:empty::after {
   content: '3 col';
 }
-.col-4::after {
+.col-4:empty::after {
   content: '4 col';
 }
-.col-5::after {
+.col-5:empty::after {
   content: '5 col';
 }
-.col-6::after {
+.col-6:empty::after {
   content: '6 col';
 }
-.col-7::after {
+.col-7:empty::after {
   content: '7 col';
 }
-.col-8::after {
+.col-8:empty::after {
   content: '8 col';
 }
-.col-9::after {
+.col-9:empty::after {
   content: '9 col';
 }
-.col-10::after {
+.col-10:empty::after {
   content: '10 col';
 }
-.col-11::after {
+.col-11:empty::after {
   content: '11 col';
 }
-.col-12::after {
+.col-12:empty::after {
   content: '12 col';
+}
+
+[class^="col-"]:not(:empty) {
+  padding: 5px;
+}
+
+.container > [class^="col-"] > [class^="col-"] {
+  background-color: rgb(240 127 128);
+  border-color: white;
+}
+.container > [class^="col-"] > [class^="col-"]::before {
+  content: 'Nested ';
 }

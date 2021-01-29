@@ -5,7 +5,6 @@
 
 [class^="col-"] {
   float: left;
-  height: 200px;
   border: 1px solid black;
 }
 .col-1 {
@@ -45,10 +44,8 @@
   width: calc((100% / 12) * 12);
 }
 
-[class*="-offset-"] {
-  height: 200px;
-  border: 1px solid black;
-}
+/* anche se in questo esercizio non servono li inserisco per completezza */
+
 .col-offset-1 {
   margin-left: calc((100% / 12) * 1);
 }
