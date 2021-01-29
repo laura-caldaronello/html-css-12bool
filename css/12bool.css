@@ -1,7 +1,7 @@
 /* nb: ho supposto che l'utente finale debba vedere solo il testo, non i bordi neri, per esercizio, altrimenti non sfrutto la classe debug (eliminandola non mi cmbia nulla)*/
 
 .container {
-  max-width: 100%;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
