@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+[class^="col-"] {
+  text-align: center;
+  line-height: 200px;
+  background-color: rgb(255 192 203);
+}
+.col-1::after {
+  content: '1 col';
+}
+.col-2::after {
+  content: '2 col';
+}
+.col-3::after {
+  content: '3 col';
+}
+.col-4::after {
+  content: '4 col';
+}
+.col-5::after {
+  content: '5 col';
+}
+.col-6::after {
+  content: '6 col';
+}
+.col-7::after {
+  content: '7 col';
+}
+.col-8::after {
+  content: '8 col';
+}
+.col-9::after {
+  content: '9 col';
+}
+.col-10::after {
+  content: '10 col';
+}
+.col-11::after {
+  content: '11 col';
+}
+.col-12::after {
+  content: '12 col';
+}
