@@ -1,4 +1,4 @@
-/* nb: ho supposto che l'utente finale debba vedere solo il testo, non i bordi neri, per esercizio, altrimenti non sfrutto la classe debug (eliminandola non mi cmbia nulla)*/
+/* nb: ho supposto che l'utente finale debba vedere solo il testo, non i bordi neri, per esercizio, altrimenti non sfrutto la classe debug (in quel caso eliminandola non mi cambia nulla)*/
 
 .container {
   max-width: 1170px;
