@@ -27,10 +27,15 @@
 /* contenuti */
 
 [class^="col-"]:empty {
+  position: relative;
   height: 200px;
-  line-height: 200px;
+}
+[class^="col-"]::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   text-align: center;
-  overflow: hidden; /* per non far rompere il layout se si stringe la finestra */
 }
 .col-1:empty::after {
   content: '1 col';
@@ -68,6 +73,42 @@
 .col-12:empty::after {
   content: '12 col';
 }
-.container > [class^="col-"] > [class^="col-"]::before {
-  content: 'Nested ';
+
+/* avrei preferito iniettare la sola parola "nested" con un before, ma in quel caso non avrei potuto trattare il content come un unico elemento e ciò avrebbe causato problemi nella centratura. in alternativa avrei potuto creare dei contenitori ulteriori nell'html per il testo ma questo mi sembrava il giusto compromesso */
+
+.container > [class^="col-"] > .col-1::after {
+  content: 'Nested 1 col';
+}
+.container > [class^="col-"] > .col-2::after {
+  content: 'Nested 2 col';
+}
+.container > [class^="col-"] > .col-3::after {
+  content: 'Nested 3 col';
+}
+.container > [class^="col-"] > .col-4::after {
+  content: 'Nested 4 col';
+}
+.container > [class^="col-"] > .col-5::after {
+  content: 'Nested 5 col';
+}
+.container > [class^="col-"] > .col-6::after {
+  content: 'Nested 6 col';
+}
+.container > [class^="col-"] > .col-7::after {
+  content: 'Nested 7 col';
+}
+.container > [class^="col-"] > .col-8::after {
+  content: 'Nested 8 col';
+}
+.container > [class^="col-"] > .col-9::after {
+  content: 'Nested 9 col';
+}
+.container > [class^="col-"] > .col-10::after {
+  content: 'Nested 10 col';
+}
+.container > [class^="col-"] > .col-11::after {
+  content: 'Nested 11 col';
+}
+.container > [class^="col-"] > .col-12::after {
+  content: 'Nested 12 col';
 }
